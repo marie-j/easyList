@@ -11,8 +11,26 @@ $(document).ready(function(){
     }
 
     $('.edit').click(function(){
-      afficherIngredients(this,recettes,$('div#' + this.id));
+      var elem = $('div#' + this.id)
+      afficherIngredients(this,recettes,elem);
+      elem.append(enregistrer);
+      elem.append(annuler);
+      var recette = recettes.get(this.id);
       this.remove();
+
+      $('.cancel').click(function(){
+        update();
+      });
+
+      $('.addIngredient').click(function(){
+        $('div#' + this.id + '>section').append(addingredient);
+      })
+      var titre = recette.titre;
+      var quantite = recette.personnes;
+      var ingredients = recette.ingredients;
+
+
+
     });
 
     $('.delete').click(function(){
