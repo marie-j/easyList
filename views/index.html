@@ -5,6 +5,7 @@
     <title>easyList</title>
     <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../bower_components/browserdb/dist/browserdb.js" charset="utf-8"></script>
+    <script src="../scripts/librairie.js" charset="utf-8"></script>
     <script type="text/javascript" src="../scripts/liste.js"></script>
   </head>
   <body>
@@ -14,6 +15,8 @@
       <h1><a href="recettes.html">Recettes</a></h1>
     </header>
 
+    <button type="button" id="deleteList">Effacer ma liste</button>
+
     <div class="add">
       <form class="add">
         <input type="text" placeholder="Recette" id="titre">
@@ -21,12 +24,11 @@
         </br>
         <input type="text" placeholder="Article" id="article">
       </form>
-      <button type="button" class="add"></button>
+      <button type="button" class="add">Ajouter à ma liste </button>
     </div>
 
-    <div class="liste">
-      <h2>Ma liste de course</h2>
-    </div>
+    <h2>Ma liste de course</h2>
+    <div class="liste"></div>
 
   </body>
 </html>
