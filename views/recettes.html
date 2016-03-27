@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>easyList</title>
     <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/browserdb/dist/browserdb.js"></script>
+    <script type="text/javascript" src="../scripts/librairie.js" charset="utf-8"></script>
     <script type="text/javascript" src="../scripts/recettes.js"></script>
   </head>
 
@@ -16,10 +18,14 @@
 
     <div class="add">
         <form class="add">
-          <input type="text" placeholder="Nom de la recette">
-          <input type="number" placeholder="Nombre de personnes">
+          <input type="text" placeholder="Nom de la recette" id="titre">
+          <input type="number" placeholder="Nombre de personnes" id="nombre">
         </form>
+        <div id="ingredients">
+
+        </div>
         <button type="button" id="addIngredient">Ajouter des ingredients</button>
+        <button type="button" id="addRecipe">Ajouter la recette</button>
     </div>
 
     <div class="recettes">
