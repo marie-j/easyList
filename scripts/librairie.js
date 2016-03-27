@@ -12,11 +12,17 @@ var addingredient = `<form>
 
 var titreRecette = function(e,n) {
   return `<div id="` + n + `">
+          <section>
             <p>` + e + `</p>
             <button type="button" class="edit" id="` + n + `"> Modifier la recette </button>
             <button type="button" class="delete" id="` + n + `"> Supprimer la recette</button>
+          </section>
           </div>`
 };
+
+var enregistrer = `<button type="button" class="save">Enregister</button>`;
+
+var annuler = `<button type="button" class="cancel">Annuler</button>`;
 
 var afficherIngredients = function(e,db,elem) {
   var ingredients = db.get(e.id).ingredients;
@@ -41,3 +47,16 @@ var listeCourse = function(e,n) {
           <button type="button" class="delete" id="` + n + `">Supprimer</button>
           </div>`
 };
+
+var ajouterAuTableau= function(tab,ingredients,quantite,unite) {
+  for (var i = 0; i< ingredients.length ; i ++) {
+    var ingred = {
+      ingredient : $(ingredients[i]).val(),
+      quantite: $(quantite[i]).val(),
+      unite : $(unite[i]).val()
+    }
+    tab.push(ingred);
+  }
+  return tab;
+
+}
