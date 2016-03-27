@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  var liste = new browserdb("liste");
   var recettes = new browserdb("recettes");
 
   var update = function() {
@@ -15,7 +16,7 @@ $(document).ready(function(){
     });
 
     $('.delete').click(function(){
-      supprRecette(this,recettes);
+      suppr(this,recettes);
       update();
     });
   }
