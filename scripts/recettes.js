@@ -7,7 +7,20 @@ $(document).ready(function(){
   });
 
   $('#addRecipe').click(function(){
+    var nom = $('#titre').val();
+    var trouve = false;
 
+    if (nom == "") {
+      window.alert("Vous n'avez pas donné de nom à votre recette");
+    }
+
+    else if (trouve) {
+      window.alert("Une recette porte déjà ce nom ! Merci de bien vouloir la modifier directement ou de changer le nom que vous voulez donner à celle-la");
+    }
+
+    else {
+
+    }
   });
 
 });
