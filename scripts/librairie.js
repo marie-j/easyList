@@ -16,7 +16,7 @@ var titreRecette = function(e,n) {
             <button type="button" class="edit" id="` + n + `"> Modifier la recette </button>
             <button type="button" class="delete" id="` + n + `"> Supprimer la recette</button>
           </div>`
-}
+};
 
 var afficherIngredients = function(e,db,elem) {
   var ingredients = db.get(e.id).ingredients;
@@ -28,8 +28,16 @@ var afficherIngredients = function(e,db,elem) {
                   <button type="button" class="deleteIngredient" id="` + i + `">Supprimer l'ingrédient</button>
                   </div>`);
   }
-}
+};
 
-var supprRecette = function(e, db) {
+var suppr = function(e, db) {
   db.remove(e.id);
-}
+};
+
+var listeCourse = function(e,n) {
+  return `<div id="` + n + `">
+          <p>` + e + `</p>
+          <button type="button" class="check" id="` + n + `">OK</button>
+          <button type="button" class="delete" id="` + n + `">Supprimer</button>
+          </div>`
+};
