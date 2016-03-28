@@ -41,7 +41,7 @@ $(document).ready(function(){
       $('.cancel').click(function(){
         var ok = window.confirm("Vous n'avez pas enregistré vos modifications ! Etes-vous sûr de vouloir quitter cette recette ?");
         if (ok) {
-          update();
+          update(db);
         }
       });
 

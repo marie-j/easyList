@@ -25,7 +25,7 @@ var enregistrer = `<button type="button" class="save">Enregister</button>`;
 
 var annuler = `<button type="button" class="cancel">Annuler</button>`;
 
-var retourAuMenu = `<button type="button" class="back">Retour au menu</button>`;
+var retourAuMenu = `<button type="button" class="back icon-undo2"></button>`;
 
 
 var afficherIngredients = function(e,db,elem) {
@@ -56,8 +56,8 @@ var suppr = function(e, db) {
 var listeCourse = function(e,n) {
   return `<div id="` + n + `">
           <p>` + e.nom + " " + e.quantite + " " + e.unite + `</p>
-          <button type="button" class="check" id="` + n + `">OK</button>
-          <button type="button" class="delete" id="` + n + `">Supprimer</button>
+          <button type="button" class="check icon-checkmark2" id="` + n + `"></button>
+          <button type="button" class="delete icon-cancel-circle" id="` + n + `"></button>
           </div>`
 };
 

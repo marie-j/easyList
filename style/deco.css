@@ -1,0 +1,114 @@
+header {
+  background-color: #D9C4B8;
+  margin-bottom: 20px;
+}
+
+header>span {
+    font-size: xx-large;
+    margin-right: 20px;
+    color: #403027;
+}
+
+a {
+  text-decoration: none;
+  color: #403027;
+}
+
+body {
+  background-color: #F2F2F2;
+}
+
+button {
+  color: #403027;
+  border: #403027 solid 1px;
+  background-color: #D9C4B8;
+  margin-left: 50px;
+  width : 150px;
+  height: 30px;
+  font-size: 12px;
+}
+
+div.add {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 5px;
+}
+
+form.add {
+  margin-bottom: 10px;
+}
+
+form.add>input {
+  border: #403027 solid 1px;
+  width:150px;
+  height: 20px;
+  margin-bottom: 2px;
+}
+
+div.liste {
+  margin-left: 20px;
+}
+
+div.liste button {
+  height: 25px;
+  width: 40px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+
+h2 {
+  color: #403027;
+  text-align: center;
+}
+
+div>p {
+  font-size: 20px;
+  text-align: justify;
+}
+
+div.liste span {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+#addIngredient {
+  margin-left: 0px;
+}
+
+#addRecipe {
+  margin-left: 2px;
+}
+
+#recherche {
+  height: 20px;
+  width: 500px;
+}
+
+#lancerRecherche {
+  width: 50px;
+}
+
+div.recettes p {
+  font-size: 20px;
+  padding-left: 50px;
+}
+
+section {
+  margin-bottom: 5px;
+}
+
+.save {
+  margin-top: 10px;
+}
+
+.cancel {
+  margin-top: 10px;
+}
+
+div.recettes form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
