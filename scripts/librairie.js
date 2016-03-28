@@ -27,9 +27,6 @@ var annuler = `<button type="button" class="cancel">Annuler</button>`;
 
 var retourAuMenu = `<button type="button" class="back">Retour au menu</button>`;
 
-var modifier = function(i) {
-  return `<button type="button" class="deleteIngredient" id="` + i + `"> Modifier l'ingrédient</button>`;
-}
 
 var afficherIngredients = function(e,db,elem) {
   var ingredients = db.get(e.id).ingredients;
@@ -45,7 +42,6 @@ var afficherIngredients = function(e,db,elem) {
 
 var show = function(e,db,elem) {
   var ingredients = db.get(e.id).ingredients;
-  elem.append(`<button type="button" class="addIngredient" id="` + e.id  + `"> Ajouter un ingrédient </button>`);
   for (var i = 0 ; i <ingredients.length ; i ++) {
     elem.append(`<div class="ingredient" id= "` + i + `">
                   <p>` + ingredients[i].ingredient + " " + ingredients[i].quantite + " " + ingredients[i].unite + `</p>
@@ -59,7 +55,7 @@ var suppr = function(e, db) {
 
 var listeCourse = function(e,n) {
   return `<div id="` + n + `">
-          <p>` + e + `</p>
+          <p>` + e.nom + " " + e.quantite + " " + e.unite + `</p>
           <button type="button" class="check" id="` + n + `">OK</button>
           <button type="button" class="delete" id="` + n + `">Supprimer</button>
           </div>`
