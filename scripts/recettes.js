@@ -21,10 +21,11 @@ $(document).ready(function(){
       });
     });
 
+
     $('.edit').click(function(){
       var nb = this.id;
       var elem = $('div#' + nb)
-      $('div#' + nb + '.ingredient').empty();
+      $('div.ingredient').remove();
 
       afficherIngredients(this,db,elem);
       elem.append(enregistrer);
@@ -57,14 +58,13 @@ $(document).ready(function(){
         $('div#' + this.id + '.ingredient >p').replaceWith(modifIngredient(ingredients,this.id));
         this.remove();
 
+        var recherche = function(e) {
+          return e.ingredient == $('#nom').val();
+        }
+
+        var ind = ingredients.findIndex(recherche);
+
         $('.valid').click(function(){
-          var recherche = function(e) {
-            e.ingredient == $('#nom');
-          }
-
-          var ind = ingredients.findIndex(recherche);
-
-          ingredients.splice(ind,1);
 
           var i = $('#nom').val();
           var q = $('#quantite').val();
@@ -76,11 +76,9 @@ $(document).ready(function(){
             unite:u,
           };
 
-          ingredients.push(newIngredient);
+          ingredients.splice(ind,1,newIngredient);
           $('div#' + this.id + '>form').replaceWith(afficheModif(i,q,u));
-          $('div#' + this.id + '>p').append(modifier(this.id));
           this.remove();
-
         });
       });
 
