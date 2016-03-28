@@ -2,6 +2,7 @@ $(document).ready(function(){
 
   var liste = new browserdb("liste");
   var recettes  = new browserdb("recettes");
+  var recherche = new browserdb("recherche");
 
   var update = function() {
     $('.liste').empty();
